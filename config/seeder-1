@@ -1,0 +1,34 @@
+import db from './db';
+
+const Seeders = async () => {
+	const client = await db.connect();
+	try {
+		const questions = 'INSERT INTO questions(question, images, answer) VALUES($1, $2, $3)';
+		await client.query(questions, [1, ['hug.jpg', 'shake.jpg', 'sign.jpg', 'thumbs.jpg'], 'Agree']);
+		await client.query(questions, [2, ['alarm.jpg', 'Bell.jpg', 'Dog.jpg', 'Police siren.jpg'], 'Alarm']);
+		await client.query(questions, [3, ['FRSC.jpg', 'LASMA.jpg', 'Police.jpg', 'VIO.jpg'], 'Arrest']);
+		await client.query(questions, [4, ['Awolowo Cap.jpg', 'Awolowo Frames.jpg', 'Biography.jpg', 'OAU Gate.jpg'], 'Awolowo']);
+		await client.query(questions, [5, ['Beef Berbeque.jpg', 'Cow.jpg', 'Kilishi.jpg', 'Suya.jpg'], 'Beef']);
+		await client.query(questions, [6, ['A child eating a fruit.jpg', 'Apple Bite.jpg', 'Dog bite.jpg', 'Shark.jpg'], 'Bite']);
+		await client.query(questions, [7, ['A woman with black gown.jpg', 'Asphalt road.jpg', 'Black Bag.jpg'], 'Black']);
+		await client.query(questions, [8, ['Comment section.jpg', 'Laptop.jpg', 'Mifi.jpg'], 'Blogger']);
+		await client.query(questions, [9, ['Fireman.jpg', 'Linemen.jpg', 'Lion.jpg', 'Military Men.jpg'], 'Brave']);
+		await client.query(questions, [10, ['Akara & Pap.jpg', 'Bread & Egg.jpg', 'Cereal bowl.jpg', 'Custard.jpg'], 'Breakfast']);
+		await client.query(questions, [11, ['Buka setting.jpg', 'Eating Amala.jpg', 'Eating Eba & Egusi.jpg', 'Selling Food.jpg'], 'Buka']);
+		await client.query(questions, [12, ['A head hitting a wall.jpg', 'Baby Bump.jpg', 'Bump Fist.jpg', 'Road Bump.jpg'], 'Bump']);
+		await client.query(questions, [13, ['a bunch of bananas.jpg', 'Bunch of Keys.jpg', 'Bunch of roses.jpg', 'hair in bunches.jpg'], 'Bunch']);
+		await client.query(questions, [14, ['Big Screen.jpg', 'Movie production.jpg', 'Pop corn.jpg', 'Ticket.jpg'], 'Cinema']);
+		await client.query(questions, [15, ['Bus-stop.jpg', 'Change.jpg', 'Danfo with a conductor.jpg', 'Man Face.jpg'], 'Conductor']);
+		await client.query(questions, [16, ['A cooling van.jpg', 'A standing fan.jpg', 'Air Conditioner.jpg', 'Champagne Bucket.jpg'], 'Cooler']);
+		await client.query(questions, [17, ['Cotton Bud.jpg', 'Cotton Fabric.jpg', 'Cotton Wool.jpg', 'T-shirt.jpg'], 'Cotton']);
+		await client.query(questions, [18, ['A cube of sugar.jpg', 'A dice.jpg', 'Carton ( Box).jpg', 'Cube puzzle( Rubik\'s cube).jpg'], 'Cube']);
+		await client.query(questions, [19, ['Music symbol.jpg', 'shaku shaku.jpg', 'Shoki dance.jpg', 'someone dancing.jpg'], 'Dance']);
+		await client.query(questions, [20, ['Bus Waiting.jpg', 'Man touching his watch.jpg', 'Old folks crossing.jpg', 'Traffic.jpg'], 'Traffic']);
+	} catch (error) {
+		throw error;
+	} finally {
+		client.release();
+	}
+};
+
+export default Seeders;

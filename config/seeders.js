@@ -1,0 +1,82 @@
+import db from './db';
+
+const Seeders = async () => {
+	const client = await db.connect();
+	try {
+		const questions = 'INSERT INTO questions(question, images, answer) VALUES($1, $2, $3)';
+		await client.query(questions, [1, ['hugging.png', 'shake.png', 'sign.png', 'thumbs_up.png'], 'Agree']);
+		await client.query(questions, [2, ['bell.png', 'clock.png', 'dog.png', 'siren.png'], 'Alarm']);
+		await client.query(questions, [3, ['cardiac.png', 'curve.png', 'police.png', 'prison.png'], 'Arrest']);
+		await client.query(questions, [4, ['book.jpg', 'independence.png', 'money.png', 'school.jpg'], 'Awolowo']);
+		await client.query(questions, [5, ['cow.png', 'grill.png', 'meat.png', 'steak.png'], 'Beef']);
+		await client.query(questions, [6, ['dog.png', 'doughnut.png', 'mosquito.png', 'shark.png'], 'Bite']);
+		await client.query(questions, [7, ['belt.png', 'dress.png', 'friday.png', 'tv.png'], 'Black']);
+		await client.query(questions, [8, ['coffee.png', 'foodgram.png', 'gadgets.png', 'lady.png'], 'Blogger']);
+		await client.query(questions, [9, ['fire.png', 'lion.png', 'sky.png', 'woman.png'], 'Brave']);
+		await client.query(questions, [10, ['bread.png', 'breakfast.png', 'cereal.png', 'sun_egg.png'], 'Breakfast']);
+		await client.query(questions, [11, ['buka.png', 'man.png', 'rice.png', 'stew.png'], 'Buka']);
+		await client.query(questions, [12, ['bump.png', 'goose.png', 'pregnancy.png', 'road.png'], 'Bump']);
+		await client.query(questions, [13, ['balloon.png', 'banana.png', 'flowers.png', 'keys.png'], 'Bunch']);
+		await client.query(questions, [14, ['action.png', 'camera.png', 'movie.png', 'popcorn.png'], 'Cinema']);
+		await client.query(questions, [15, ['bus.png', 'change.png', 'light.png', 'music.png'], 'Conductor']);
+		await client.query(questions, [16, ['fan.png', 'ice.png', 'party.png', 'water.png'], 'Cooler']);
+		await client.query(questions, [17, ['cotton.png', 'fabric.png', 'shirt.png', 'wool.png'], 'Cotton']);
+		await client.query(questions, [18, ['cartoon.png', 'sugar.png', 'dice.png', 'rubik.png'], 'Cube']);
+		await client.query(questions, [19, ['dancing.png', 'group.png', 'music.png', 'shaku.png'], 'Dance']);
+		await client.query(questions, [20, ['bus.png', 'man.png', 'old.png', 'traffic.png'], 'Delay']);
+		await client.query(questions, [21, ['pig.png', 'sport.png', 'laundry.png', 'leg.png'], 'Dirty']);
+		await client.query(questions, [22, ['water.png', 'chapman.png', 'kunu.png', 'smoothie.png'], 'Drink']);
+		await client.query(questions, [23, ['cashier.png', 'jollof.png', 'overlook.png', 'payment.png'], 'Eatery']);
+		await client.query(questions, [24, ['frames.png', 'teeth.png', 'micro.png', 'turtleneck.png'], 'Eatery']);
+		await client.query(questions, [25, ['family.png', 'dog.png', 'goat.png', 'chick.png'], 'Family']);
+		await client.query(questions, [26, ['cheetah.png', 'flash.png', 'run.png', 'speed.png'], 'Fast']);
+		await client.query(questions, [27, ['milk.png', 'oil.png', 'paint.png', 'water.png'], 'Fluid']);
+		await client.query(questions, [28, ['amala.png', 'rice.png', 'soup.png', 'tuwo.jpg'], 'Food']);
+		await client.query(questions, [29, ['body.png', 'cartoon.png', 'football.png', 'frame.png'], 'Frame']);
+		await client.query(questions, [30, ['drink.png', 'full.png', 'night.png', 'traffic.png'], 'Friday']);
+		await client.query(questions, [31, ['basket.png', 'cup.png', 'grocery.png', 'money.png'], 'Full']);
+		await client.query(questions, [32, ['ayo.png', 'candy.png', 'cards.png', 'console.png'], 'Games']);
+		await client.query(questions, [33, ['bar.png', 'horse.png', 'ring.png', 'table.png'], 'Gold']);
+		await client.query(questions, [34, ['naira.png', 'flag.png', 'house.png', 'parrot.png'], 'Green']);
+		await client.query(questions, [35, ['herdsmen.png', 'killishi.png', 'kunu.png', 'tuwo.png'], 'Green']);
+		await client.query(questions, [36, ['mother.png', 'handle.png', 'hands.png', 'phone.png'], 'Hold']);
+		await client.query(questions, [37, ['couple.png', 'festival.png', 'palmwine.png', 'soup.png'], 'Igbo']);
+		await client.query(questions, [38, ['drink.png', 'football.png', 'woman.png', 'kick.png'], 'Kick']);
+		await client.query(questions, [39, ['civic.png', 'ikoyi.png', 'national.png', 'bus.png'], 'Lagos']);
+		await client.query(questions, [40, ['receptionist.png', 'road.png', 'paper.png', 'race.png'], 'Line']);
+		await client.query(questions, [41, ['hugging.png', 'shake.png', 'sign.png', 'thumbs_up.png'], 'Agree']);
+		await client.query(questions, [42, ['giant.png', 'giraffe.png', 'traffic.png', 'sky.png'], 'Long']);
+		await client.query(questions, [43, ['doctor.png', 'drug.png', 'hand.png', 'mosquito.png'], 'Malaria']);
+		await client.query(questions, [44, ['match.png', 'tennis.png', 'march.png', 'stick.png'], 'Match']);
+		await client.query(questions, [45, ['back.png', 'head.png', 'neck.png', 'tooth.png'], 'Pain']);
+		await client.query(questions, [46, ['cake.png', 'choc.png', 'pizza.png', 'puzzle.png'], 'Piece']);
+		await client.query(questions, [47, ['blu.png', 'chess.png', 'player.png', 'football.png'], 'Player']);
+		await client.query(questions, [48, ['baton.png', 'black.png', 'siren.png', 'traffic.png'], 'Police']);
+		await client.query(questions, [49, ['money.png', 'car.png', 'golden.png', 'jet.png'], 'Rich']);
+		await client.query(questions, [50, ['boli.png', 'coffee.png', 'roast.png', 'suya.png'], 'Roast']);
+		await client.query(questions, [51, ['akara.jpg', 'broom.png', 'laundry.png', 'owambe.png'], 'Saturday']);
+		await client.query(questions, [52, ['bouncer.png', 'dog.png', 'navy.png', 'police.png'], 'Security']);
+		await client.query(questions, [53, ['female.png', 'shoes.png', 'kid.png', 'male.png'], 'Shoes']);
+		await client.query(questions, [54, ['basketball.png', 'photo.png', 'arrow.png', 'kicking.png'], 'Shoot']);
+		await client.query(questions, [55, ['female.png', 'male.png', 'noisy.png', 'quarrel.png'], 'Shout']);
+		await client.query(questions, [56, ['breakdance.png', 'player.png', 'math.png', 'instrument.png'], 'Skill']);
+		await client.query(questions, [57, ['donkey.png', 'traffic.png', 'people.png', 'snail.png'], 'Slow']);
+		await client.query(questions, [58, ['bread.png', 'pie.png', 'puff.png', 'sausage.png'], 'Snack']);
+		await client.query(questions, [59, ['cocoa.jpg', 'ikoyi.jpg', 'national.jpg', 'olumo.jpg'], 'State']);
+		await client.query(questions, [60, ['bee.png', 'mosquito.png', 'sharp.png', 'syringe.png'], 'Sting']);
+		await client.query(questions, [61, ['woman.png', 'tear.png', 'cloth.png', 'paper.png'], 'Tear']);
+		await client.query(questions, [62, ['analogue.png', 'digital.png', 'hour.png', 'wrist.png'], 'Time']);
+		await client.query(questions, [63, ['dog.png', 'gym.png', 'run.png', 'kids.png'], 'Train']);
+		await client.query(questions, [64, ['bus.png', 'napep.png', 'okada.png', 'train.png'], 'Transport']);
+		await client.query(questions, [65, ['airplane.png', 'mechanic.png', 'bridge.png', 'underwear.png'], 'Under']);
+		await client.query(questions, [66, ['student.png', 'work.png', 'cooking.png', 'drinking.png'], 'Woman']);
+		await client.query(questions, [67, ['laptop.png', 'office.png', 'paperwork.png', 'suit.png'], 'Work']);
+		await client.query(questions, [68, ['agbada.png', 'agogo.png', 'amala.png', 'party.png'], 'Yoruba']);
+	} catch (error) {
+		throw error;
+	} finally {
+		client.release();
+	}
+};
+
+export default Seeders;
