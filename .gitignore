@@ -3,5 +3,5 @@ node_modules
 dist
 nano
 .heroku
-.src
+src
 package.1.json
